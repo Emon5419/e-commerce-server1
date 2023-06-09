@@ -7,12 +7,6 @@ const authRouter = require("./routes/authRoute");
 dbConnect();
 
 
-app.use("/", (req, res) => {
-   res.send("সার্ভার ঠিক মতো চলেরতো")
-})
-
-
-
 app.use("/api/user", authRouter);
 app.listen(PORT, () => {
    console.log(`Server is running at PORT ${PORT}`);
