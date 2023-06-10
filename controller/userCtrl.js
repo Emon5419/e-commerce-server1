@@ -3,7 +3,7 @@ const User = require("../models/userModel");
 const createUser = async (req, res) =>{
 
    const email=req.body.email;
-   const findUser = await User.fineOne(email);
+   const findUser = await User.find({email:email});
 
    if(!findUser){
       //create a new User
